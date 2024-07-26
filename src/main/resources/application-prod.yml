@@ -1,0 +1,6 @@
+conf:
+    rabbit:
+        host: rabbitmq
+        port: 5672
+        user: ${RABBIT_USER}
+        pass: ${RABBIT_PASS}

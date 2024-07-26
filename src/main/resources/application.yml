@@ -1,0 +1,23 @@
+server:
+    port: 8099
+    servlet:
+        context-path: /api/v1/sse
+spring:
+    application:
+        name: ofxmssse
+    rabbitmq:
+        host: ${conf.rabbit.host}
+        port: ${conf.rabbit.port}
+        username: ${conf.rabbit.user}
+        password: ${conf.rabbit.pass}
+queue:
+    name: 
+        sse: sse.queue
+        imported: imported.queue
+        imported-fail: imported.fail.queue
+    routing-key:
+        sse: sse
+        imported: imported
+        imported-fail: imported.fail
+exchange:
+    name: ofx.app
