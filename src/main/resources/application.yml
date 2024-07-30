@@ -3,6 +3,9 @@ server:
     servlet:
         context-path: /api/v1/sse
 spring:
+    profiles:
+        default: dev
+        active: ${SPRING_ACTIVE_PROFILE:default}
     application:
         name: ofxmssse
     rabbitmq:
