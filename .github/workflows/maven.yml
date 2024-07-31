@@ -14,7 +14,7 @@ on:
 
 jobs:
   build:
-
+    name: Test & Build & Docker Image
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +37,11 @@ jobs:
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-
+  
+  deploy_to_vps:
+    name: Push to VPS
+    runs-on: ubuntu-latest
+    steps:
     - name: Deploy to VPS
       uses: appleboy/ssh-action@master
       with:
