@@ -12,6 +12,10 @@ spring:
         port: ${conf.rabbit.port}
         username: ${conf.rabbit.user}
         password: ${conf.rabbit.pass}
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka/     
 queue:
     name: 
         sse: sse.queue
