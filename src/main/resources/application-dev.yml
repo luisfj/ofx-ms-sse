@@ -4,3 +4,14 @@ conf:
         port: 5672
         user: admin
         pass: admin
+spring:
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: http://localhost:9091/realms/luifj-ofx-auth
+logging:
+    level:
+        org:
+            springframework:
+                security: DEBUG
