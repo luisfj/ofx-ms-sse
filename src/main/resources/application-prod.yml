@@ -15,4 +15,4 @@ spring:
 eureka:
     client:
         service-url:
-            defaultZone : http://ofx-service-registry:8761/eureka/
+            defaultZone: http://ofx-service-registry:8761/eureka/
